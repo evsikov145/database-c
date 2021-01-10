@@ -9,11 +9,9 @@ void Menu()
         << "(0) Выход из программы" << endl
         << "(1) Ввод данных" << endl
         << "(2) Вывод данных" << endl
-        << "(3) Изменение данных" << endl
-        << "(4) Удаление данных" << endl
-        << "(5) Добавление данных" << endl
-        << "(6) Сортировка данных" << endl
-        << "(6) Сохранение данных" << endl
+        << "(3) Добавление данных" << endl
+        << "(4) Сортировка данных" << endl
+        << "(5) Сохранение данных" << endl
         << "Ваш выбор: ";
     cin >> _stateMenu;
 }
@@ -73,34 +71,6 @@ void main()
             system("cls");
 
             if (amountOfData != 0) {
-                DataChange(d, amountOfData);
-            }
-            else {
-                cout << "Данные пусты!" << endl;
-            }
-
-            system("pause");
-            system("cls");
-            Menu();
-            break;
-        case 4: 
-            system("cls");
-
-            if (amountOfData != 0) {
-                DeleteData(d, amountOfData);
-            }
-            else {
-                cout << "Данные пусты!" << endl;
-            }
-            
-            system("pause");
-            system("cls");
-            Menu();
-            break;
-        case 5: 
-            system("cls");
-
-            if (amountOfData != 0) {
                 AddData(d, amountOfData);
                 amountOfData++;
             }
@@ -112,7 +82,7 @@ void main()
             system("cls");
             Menu();
             break;  
-        case 6:
+        case 4:
             system("cls");
 
             if (amountOfData != 0) {
@@ -126,7 +96,7 @@ void main()
             system("cls");
             Menu();
             break;
-        case 7:
+        case 5:
             system("cls");
 
             cout << "Введите название файла: ";
