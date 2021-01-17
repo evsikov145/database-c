@@ -10,8 +10,9 @@ void Menu()
         << "(1) Ввод данных" << endl
         << "(2) Вывод данных" << endl
         << "(3) Добавление данных" << endl
-        << "(4) Сортировка данных" << endl
+        << "(4) Сортировка данных по полю Пробег" << endl
         << "(5) Сохранение данных" << endl
+        << "(6) Поиск данных по полю ГосНомер" << endl
         << "Ваш выбор: ";
     cin >> _stateMenu;
 }
@@ -26,6 +27,7 @@ void main()
     int _actions,
         amountOfData = 0;
     string fileName;
+    string name;
 
     Data* d = new Data[amountOfData];
 
@@ -105,6 +107,25 @@ void main()
 
             if (amountOfData != 0) {
                 SaveData(d, amountOfData, fileName);
+            }
+            else {
+                cout << "Данные пусты!" << endl;
+            }
+
+            system("pause");
+            system("cls");
+            Menu();
+            break;
+
+        case 6:
+            system("cls");
+
+            cout << "Введите искомое значение ( ГосНомер ): ";
+            cin >> name;
+            system("cls");
+
+            if (amountOfData != 0) {
+                SearchData(d, amountOfData, name);
             }
             else {
                 cout << "Данные пусты!" << endl;

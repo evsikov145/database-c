@@ -24,4 +24,5 @@ void Copy(Data& d_n, Data& d_o);
 void AddData(Data* (&d), int& n);
 void DataSorting(Data *d, int n);
 void SaveData(Data* d, int n, string fileName);
+void SearchData(Data* d, int n, string name);
 

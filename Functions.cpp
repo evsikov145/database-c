@@ -185,3 +185,24 @@ void SaveData(Data* d, int n, string fileName) {
 	record.close();
 
 }
+
+void SearchData(Data* d, int n, string name) {
+
+	bool flag = false;
+
+	for (int i = 0; i < n; i++) {
+		if (d[i].numberCar == name) {
+			flag = true;
+			cout << "Марка: " << d[i].brand << endl;
+			cout << "Модель: " << d[i].model << endl;
+			cout << "ГосНомер: " << d[i].numberCar << endl;
+			cout << "Пробег: " << d[i].mileage << endl;
+			cout << "Цвет: " << d[i].color << endl;
+			cout << "Год: " << d[i].year << endl;
+			break;
+		}
+	}
+	if (flag == false) {
+		cout << "Данные по ГосНомеру не найдены" << endl;
+	}
+}
